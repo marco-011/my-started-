@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .centre {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+
+      }
+      img{
+        width: 20%;
+        height: 20%;
+      }
+      .arc {
+  width: 200px;
+  height: 200px;
+  background: red;         /* arc color */
+  border-radius: 100% 0 0 0;  /* makes only one corner round */
+  clip-path: inset(0 0 50% 50%); /* show only 0°–90° area */
+}
+
+    </style>
+  </head>
+  <body>
+   
+   
+   
+<div class="centre">
+  <img src="Ellipse 1.png" class="circleimg">
+</div>
+<div class="arc"></div>
+
+
+<script>
+  const power = document.querySelector(".circleimg");
+
+  power.addEventListener("click", function () {
+     
+    for (let i = 1; i <= 8; i++) {
+      setTimeout(() => {
+      
+        power.src = `Ellipse ${i}.png`;
+      }, i * 1000); // change every 1 second
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
